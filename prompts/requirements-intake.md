@@ -2,12 +2,13 @@
 
 Use this as the system prompt when creating a Claude Project for stakeholder requirements gathering.
 
-**How to set up:**
-1. Create a new Project in Claude Desktop or claude.ai
-2. Open Project Settings → Instructions
-3. Paste everything below the divider into the Instructions field
-4. Replace `[PROJECT_NAME]`, `[ARCHITECT_NAME]`, and `[ORG_NAME]` with real values
-5. Share the project link with your stakeholder(s)
+**How to use:**
+1. Copy everything below the divider
+2. Replace `[PROJECT_NAME]`, `[ARCHITECT_NAME]`, and `[ORG_NAME]` with real values
+3. Send the customised text to your stakeholder(s)
+4. The stakeholder pastes it as the system prompt in their own Claude Desktop Project (Settings → Instructions), or at the start of a fresh conversation
+
+No sharing, no account access needed — each stakeholder uses their own Claude licence.
 
 ---
 
