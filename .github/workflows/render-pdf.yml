@@ -1,0 +1,41 @@
+name: Render PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+
+jobs:
+  render-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pandoc and LaTeX
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended
+
+      - name: Collect Markdown files
+        id: collect
+        run: |
+          files=$(find docs -name "*.md" | sort | tr '\n' ' ')
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+
+      - name: Render PDF
+        run: |
+          mkdir -p output/pdf
+          pandoc ${{ steps.collect.outputs.files }} \
+            --output output/pdf/hld.pdf \
+            --pdf-engine=xelatex \
+            --toc \
+            --toc-depth=3 \
+            --variable geometry:margin=2.5cm
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hld-pdf
+          path: output/pdf/hld.pdf
+          retention-days: 90
