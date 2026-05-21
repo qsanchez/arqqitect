@@ -5,3 +5,6 @@ output/slides/*.pdf
 
 # Brainstorm session files
 .superpowers/
+
+# Development artifacts — not part of the template
+docs/superpowers/
