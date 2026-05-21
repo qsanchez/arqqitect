@@ -1,3 +1,8 @@
+---
+name: generate-slides
+description: Read all docs/ and produce a Marp-formatted slide deck in output/slides/slides.md. Accepts audience argument (executive/technical/security).
+---
+
 # arqqitect: Generate Slides
 
 Read all content in `docs/` and produce a Marp-formatted slide deck in `output/slides/slides.md`.

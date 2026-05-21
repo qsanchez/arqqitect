@@ -1,3 +1,8 @@
+---
+name: review
+description: Review HLD chapter(s) for gaps, inconsistencies, and risks. Writes findings to docs/10-raid/issues.md. Use before opening a PR or when checking cross-chapter consistency.
+---
+
 # arqqitect: Review
 
 Review one chapter or all chapters of the HLD for gaps, inconsistencies, and risks.

@@ -1,3 +1,8 @@
+---
+name: draft
+description: Interview the architect with chapter-appropriate questions and draft Markdown files for an HLD chapter. Use when starting or expanding a chapter in docs/.
+---
+
 # arqqitect: Draft
 
 Help the architect draft a chapter of the HLD by conducting a structured interview and writing Markdown files into the chapter folder.
