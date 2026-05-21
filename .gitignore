@@ -1,0 +1,7 @@
+# Generated rendering artifacts — produced by CI, not committed
+output/pdf/*.pdf
+output/slides/*.html
+output/slides/*.pdf
+
+# Brainstorm session files
+.superpowers/
