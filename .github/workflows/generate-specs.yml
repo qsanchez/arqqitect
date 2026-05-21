@@ -1,0 +1,23 @@
+name: Generate Engineering Specs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**/*-spec.md'
+
+jobs:
+  generate-specs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run generate-specs.sh
+        run: bash scripts/generate-specs.sh
+
+      - name: Upload specs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: engineering-specs
+          path: output/specs/
+          retention-days: 90
