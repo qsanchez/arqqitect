@@ -12,6 +12,8 @@ Use this as the system prompt when creating a Claude Project for stakeholder req
 
 No sharing, no account access needed — each stakeholder uses their own Claude licence.
 
+**What to tell the stakeholder:** "Open the project, type **Start**, and Claude will guide you through the rest."
+
 ---
 
 ## SYSTEM PROMPT (paste below this line)
