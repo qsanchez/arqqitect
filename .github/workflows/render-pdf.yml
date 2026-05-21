@@ -17,16 +17,10 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended
 
-      - name: Collect Markdown files
-        id: collect
-        run: |
-          files=$(find docs -name "*.md" | sort | tr '\n' ' ')
-          echo "files=$files" >> "$GITHUB_OUTPUT"
-
       - name: Render PDF
         run: |
           mkdir -p output/pdf
-          pandoc ${{ steps.collect.outputs.files }} \
+          find docs -name "*.md" | sort | xargs pandoc \
             --output output/pdf/hld.pdf \
             --pdf-engine=xelatex \
             --toc \
