@@ -6,7 +6,9 @@ Use this as the system prompt when creating a Claude Project for stakeholder req
 1. Copy everything below the divider
 2. Replace `[PROJECT_NAME]`, `[ARCHITECT_NAME]`, and `[ORG_NAME]` with real values
 3. Send the customised text to your stakeholder(s)
-4. The stakeholder pastes it as the system prompt in their own Claude Desktop Project (Settings → Instructions), or at the start of a fresh conversation
+4. The stakeholder creates their own Claude Desktop Project (takes 30 seconds) and pastes the text into Settings → Instructions
+
+> **Important:** this must go into Project Instructions, not into a chat message. Pasted as a chat message, Claude will not reliably follow the one-question-at-a-time behaviour throughout a long conversation.
 
 No sharing, no account access needed — each stakeholder uses their own Claude licence.
 
