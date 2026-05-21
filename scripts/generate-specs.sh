@@ -13,7 +13,7 @@ while IFS= read -r -d '' file; do
     filename=$(basename "$file")
     cp "$file" "$OUTPUT_DIR/$filename"
     echo "Collected: $filename"
-    ((count++))
+    count=$((count + 1))
 done < <(find "$DOCS_DIR" -name "*-spec.md" -print0 | sort -z)
 
 echo "Done. $count spec file(s) written to $OUTPUT_DIR"
